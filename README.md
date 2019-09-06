@@ -14,7 +14,7 @@ The create_db.sh script requires:
 
 The server.js requires:
 
-* Node.js >= v10
+* Node.js >= 8
 * data/edgar.db
 
 ### Getting started
@@ -22,3 +22,9 @@ The server.js requires:
 1. Run `create_db.sh` to generate the `edgar.db` database.
 2. Then run `npm start` to start the HTTP API server.
 3. Visit https://localhost:3000 to see several examples of using the API
+
+
+## Todo
+
+* Provide combined views of the data from multiple tables
+* Cleanup the files used to create the DB

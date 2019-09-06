@@ -1,0 +1,17 @@
+{
+  "name": "VFI-EDGAR",
+  "version": "1.0.0",
+  "description": "Api for retrieving EDGAR data from a local database",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Nathan Friedly",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.3",
+    "sqlite3": "^4.1.0"
+  }
+}
