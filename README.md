@@ -28,3 +28,6 @@ The server.js requires:
 
 * Provide combined views of the data from multiple tables
 * Cleanup the files used to create the DB
+* Set up indexes and maybe foreign keys in the database
+* Use correct data-types in the db (default is all text)
+* Use correct data-types in JS (e.g. Date)

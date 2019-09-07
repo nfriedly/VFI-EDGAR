@@ -1,5 +1,6 @@
 const db = require('knex')({
-    dialect: 'sqlite3',
+    client: 'sqlite3',
+    useNullAsDefault: true,
     connection: {
         filename: './data/edgar.db',
     },
