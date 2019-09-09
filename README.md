@@ -7,15 +7,9 @@ Includes a script to fetch recent sample data and import it into a SQLite DB.
 
 ### Prerequisites
 
-The create_db.sh script requires:
-
-* Bash
+* Bash ("Git Bash" works on Windows)
 * SQLite 3
-
-The server.js requires:
-
 * Node.js >= 8
-* data/edgar.db
 
 ### Getting started
 
@@ -24,10 +18,12 @@ The server.js requires:
 3. Visit https://localhost:3000 to see several examples of using the API
 
 
-## Todo
+## Thoughts on the project
 
-* Provide combined views of the data from multiple tables
-* Cleanup the files used to create the DB
-* Set up indexes and maybe foreign keys in the database
-* Use correct data-types in the db (default is all text)
-* Use correct data-types in JS (e.g. Date)
+The original request here was fairly open-ended, but I believe this meets the goals of storing the data in a repeatable fashion and making it available to a front-end.
+
+It seems that the Submissions are the primary data here, and that when viewing a given Submission, the associated Numbers and Presentation of Statements data would also be desired. So, the primary API endpoint combines all three of these together. 
+It makes for a fairly heavy request, but it seemed like the most-appropriate option.
+
+I considered also including the Tag data with a Submission but decided against it, as the data there seems like it would less commonly be required. 
+Also to keep the Submission response size and time from balooning any further.

@@ -15,21 +15,37 @@
 <div class="container">
     <h1>EDGAR API</h1>
 
-    <p>Example queries for raw data:</p>
+    <h2>Submissions</h2>
+    <p><code>/sub/[adsh]</code></p>
+    <p>Example: <a href="/sub/0000002178-19-000020">/sub/0000002178-19-000020</a></p>
+    <p>Requesting a single submission will automatically include the associated Numbers and Presentation of Statements.</p>
+
+    <h2>Tags</h2>
     <ul>
-        <li>Submissions: <a href="/sub">/sub</a></li>
-        <li>Tags: <a href="/tag">/tag</a></li>
-        <li>Numbers: <a href="/num">/num</a></li>
-        <li>Presentation of Statements: <a href="/pre">/pre</a></li>
+        <li>All versions of a tag: <code>/tag/[tag]</code>.
+            Example: <a href="/tag/EntityDomain">/tag/EntityDomain</a></li>
+        <li>A specific version of a tag: <code>/tag/[tag]?version=[version]</code>.
+            Example: <a href="/tag/EntityDomain?version=dei/2018">/tag/EntityDomain?version=dei/2018</a></li>
     </ul>
-    <p>Use the <code>offset</code> and optional <code>limit</code> parameters to paginate results: <a href="/sub?offset=10&limit=10">/sub?offset=10&limit=10</a></p>
+
+    <h2>Raw data</h2>
+    <ul>
+        <li>Submissions: <a href="/sub?offset=0&limit=10">/sub?offset=0&limit=10</a></li>
+        <li>Tags: <a href="/tag?offset=0&limit=10">/tag?offset=0&limit=10</a></li>
+        <li>Numbers: <a href="/num?offset=0&limit=10">/num?offset=0&limit=10</a></li>
+        <li>Presentation of Statements: <a href="/pre?offset=0&limit=10">/pre?offset=0&limit=10</a></li>
+    </ul>
+    <p>Use the <code>offset</code> and optional <code>limit</code> parameters to paginate results:
+        <a href="/sub?offset=10&limit=10">/sub</a></p>
 </div>
 
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+-->
 </body>
 </html>
