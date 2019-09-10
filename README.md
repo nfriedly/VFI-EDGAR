@@ -14,8 +14,9 @@ Includes a script to fetch recent sample data and import it into a SQLite DB.
 ### Getting started
 
 1. Run `create_db.sh` to generate the `edgar.db` database.
-2. Then run `npm start` to start the HTTP API server.
-3. Visit https://localhost:3000 to see several examples of using the API
+2. Run `npm install` to install dependencies
+3. Run `npm start` to start the HTTP API server.
+4. Visit https://localhost:3000 to see several examples of using the API
 
 ## Thoughts on the project
 
